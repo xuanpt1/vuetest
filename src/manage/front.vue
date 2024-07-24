@@ -4,7 +4,6 @@
   <button @click="toSortTest">设置页具体页面跳转测试</button>
   <button @click="toSideTest">侧边栏测试</button>
   <button @click="toFormTest">表格测试</button>
-
 </template>
 
 <script>
@@ -26,6 +25,9 @@ export default {
     toFormTest(){
       router.push("/formTest")
     },
+  },
+  mounted() {
+    this.toLogin()
   }
 }
 </script>
