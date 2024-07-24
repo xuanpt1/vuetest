@@ -15,9 +15,7 @@
 <!--          <input class="form__input" type="text" placeholder="请输入邮箱"/>-->
 <!--          <input class="form__input" type="password" placeholder="请输入密码"/>-->
 <!--          <input class="form__input" type="password" placeholder="请确认密码"/>-->
-          <router-link to="/manage/main">
-          <div class="form__button">撤!</div>
-          </router-link>
+          <div class="form__button" @click="gotoFunk()">撤!</div>
         </form>
       </div>
 
@@ -77,6 +75,10 @@ export default {
     }
   },
   methods: {
+    gotoFunk(){
+      window.location.href ="http://" + window.location.host
+      window.location.reload();
+    },
     userLogin() {
       console.log(this.$refs.username.value)
       console.log(this.$refs.password.value)
