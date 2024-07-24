@@ -15,7 +15,8 @@
 <!--          <input class="form__input" type="text" placeholder="请输入邮箱"/>-->
 <!--          <input class="form__input" type="password" placeholder="请输入密码"/>-->
 <!--          <input class="form__input" type="password" placeholder="请确认密码"/>-->
-          <div class="form__button" @click="gotoFunk()">撤!</div>
+<!--          <div class="form__button" @click="gotoFunk()">撤!</div>-->
+          <AButton class="form__button" type="link" :href="homeUrl">撤!</AButton>
         </form>
       </div>
 
@@ -72,13 +73,10 @@ export default {
         email: '',
         password: '',
       },
+      homeUrl: "http://" + window.location.host,
     }
   },
   methods: {
-    gotoFunk(){
-      window.location.href ="http://" + window.location.host
-      window.location.reload();
-    },
     userLogin() {
       console.log(this.$refs.username.value)
       console.log(this.$refs.password.value)
